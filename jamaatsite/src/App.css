@@ -1,9 +1,18 @@
-.drawer {
-  background-color: brown;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+.ant-carousel .slick-slide {
+    position: relative;
+    text-align: center;
+    line-height: 160px;
+    overflow: hidden;
 }
-button {
-  background-color: red;
+
+.ant-carousel .slick-slide h3 {
+    color: #fff;
+}
+
+.pic1 {}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }

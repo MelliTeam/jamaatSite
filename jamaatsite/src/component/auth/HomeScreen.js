@@ -5,7 +5,13 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import 'antd/dist/antd.css';
 import { Carousel } from 'antd';
 import { Input } from 'antd';
+import ghaltak from './ghaltak.jpg' 
+import ring from './ring.jpg' 
+import pic from './pic.png'
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 const { Header, Content, Footer } = Layout;
+
 
 
 const { Search } = Input;
@@ -32,27 +38,30 @@ export default class HomeScreen extends React.Component{
 
     render(){
         return(
+            <div>
+
             
-            <Layout className="layout">
-            <Header>
+              <div className='headnav'>
             
             
-             
               <Menu
                 theme="dark"
                 mode="horizontal"
-                defaultSelectedKeys={['2']}
-                style={{ lineHeight: '64px' }}
+                defaultSelectedKeys={['1']}
+                style={{ lineHeight: '64px', display:'flex',}}
+
               >
                   <Search
                 placeholder="input search text"
                 onSearch={value => console.log(value)}
-                style={{ width: 200}}
+                style={{ width: 200,height:25}}
                 />
-                <Menu.Item key="1" onClick={this.showDrawer}>menu</Menu.Item>
+                <Menu.Item key="1" onClick={this.showDrawer} style={{alignSelf:'flex-end',marginLeft:'5px'}} >menu</Menu.Item>
               </Menu>
-            </Header>
-            <Content style={{ padding: '0 50px' }}>
+
+            
+            </div>
+            <div>
             
             <Drawer 
               
@@ -65,30 +74,41 @@ export default class HomeScreen extends React.Component{
               <p>Some contents...</p>
               <p>Some contents...</p>
               <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>Some contents...</p>
+              <p>About Us</p>              
             </Drawer>
-              <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-              </Breadcrumb>
-              <div ><Carousel autoplay>
-    <div>
-      <h3>1</h3>
-    </div>
-    <div>
-      <h3>2</h3>
-    </div>
-    <div>
-      <h3>3</h3>
-    </div>
-    <div>
-      <h3>4</h3>
-    </div>
-  </Carousel></div>
-            </Content>
+            </div>
+              <div>
+              <Slider>
+ 
+            <h2>baby</h2>
+            <div>hey</div>
+  
+</Slider>
+                
+    
+            {/* <Carousel autoplay                            >
+            <div className='pic1'>
+              
+              
+            </div>
+            <div>
+              
+            </div>
+            <div>
+              
+            </div>
+            <div>
+              
+            </div>
+  </Carousel> */}
+  </div>
+            
+            <div>
             <Footer style={{ textAlign: 'center' }}>RingeTehran Desinged by MelliTeam</Footer>
-          </Layout>
-          
+            </div>
+          </div>
         )
     }
 }
